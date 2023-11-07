@@ -9,11 +9,12 @@ This desktop application has been developed using NetBeans IDE and offers a powe
 - [User Guide](#user-guide)
 
 ## How to Download and Install
+Installation Video
+https://github.com/erdemserhat/secureNotepad/assets/116950260/bd563c48-21e1-4695-a2b1-967683b64347
 
 1. [Download the latest version of the application from this link](link).
-2. 
-3. After downloading, extract the contents to your preferred directory.
-4. Navigate to the extracted directory and double-click on the "SecureNotePadBase.exe" file to launch the application.
+2. After downloading, extract the contents to your preferred directory.
+3. Navigate to the extracted directory and double-click on the "SecureNotePadBase.exe" file to launch the application.
 
 ## User Guide
 
