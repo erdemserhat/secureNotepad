@@ -1,7 +1,10 @@
-package securenotepad;    
-import ioProcesses.*;
-import javax.swing.JFileChooser;
-import rsa.*;
+package securenotepad;
+
+import ioProcesses.ioProcesses;
+import rsa.Rsa;
+import rsa.TextChiper;
+
+import javax.swing.*;
 
 public class NotepadInterface extends javax.swing.JFrame {
     public static String message;
@@ -39,10 +42,9 @@ public class NotepadInterface extends javax.swing.JFrame {
         setTitle("Secure Notepad");
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
+        getContentPane().setLayout(new awtextra.AbsoluteLayout());
         label_title_write.setText("Bir Başlık Ekle :");
-        getContentPane().add(label_title_write, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 88, 28));
+        getContentPane().add(label_title_write, new awtextra.AbsoluteConstraints(10, 40, 88, 28));
 
         encrypt_button.setText("Şifrele");
         encrypt_button.addActionListener(new java.awt.event.ActionListener() {
@@ -50,28 +52,28 @@ public class NotepadInterface extends javax.swing.JFrame {
                 encrypt_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(encrypt_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 460, 90, 30));
+        getContentPane().add(encrypt_button, new awtextra.AbsoluteConstraints(160, 460, 90, 30));
 
         tp_text.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jScrollPane1.setViewportView(tp_text);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 430, 368));
+        getContentPane().add(jScrollPane1, new awtextra.AbsoluteConstraints(10, 80, 430, 368));
 
         info_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(info_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 150, 30));
+        getContentPane().add(info_label, new awtextra.AbsoluteConstraints(0, 460, 150, 30));
 
         label_read.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         label_read.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         label_read.setText("NOT OKU");
-        getContentPane().add(label_read, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 460, 50));
+        getContentPane().add(label_read, new awtextra.AbsoluteConstraints(490, 10, 460, 50));
 
         label_write.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         label_write.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         label_write.setText("NOT YAZ");
-        getContentPane().add(label_write, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 430, 50));
+        getContentPane().add(label_write, new awtextra.AbsoluteConstraints(10, 0, 430, 50));
 
         tf_input_read.setText("Okumak İstediğiniz Şifreli Notu Seçiniz");
-        getContentPane().add(tf_input_read, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 70, 243, 28));
+        getContentPane().add(tf_input_read, new awtextra.AbsoluteConstraints(590, 70, 243, 28));
 
         tf_title_write.setOpaque(true);
         tf_title_write.addActionListener(new java.awt.event.ActionListener() {
@@ -79,8 +81,8 @@ public class NotepadInterface extends javax.swing.JFrame {
                 tf_title_writeActionPerformed(evt);
             }
         });
-        getContentPane().add(tf_title_write, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 330, 30));
-        getContentPane().add(info_label_read, new org.netbeans.lib.awtextra.AbsoluteConstraints(665, 467, 310, 22));
+        getContentPane().add(tf_title_write, new awtextra.AbsoluteConstraints(100, 40, 330, 30));
+        getContentPane().add(info_label_read, new awtextra.AbsoluteConstraints(665, 467, 310, 22));
 
         filechooser.setDialogType(javax.swing.JFileChooser.CUSTOM_DIALOG);
         filechooser.setApproveButtonText("Şifreyi Çöz");
@@ -93,10 +95,10 @@ public class NotepadInterface extends javax.swing.JFrame {
                 filechooserActionPerformed(evt);
             }
         });
-        getContentPane().add(filechooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 470, 350));
+        getContentPane().add(filechooser, new awtextra.AbsoluteConstraints(460, 110, 470, 350));
 
         background.setBackground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 500));
+        getContentPane().add(background, new awtextra.AbsoluteConstraints(0, 0, 970, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -125,7 +127,7 @@ public class NotepadInterface extends javax.swing.JFrame {
             ioProcesses io = new ioProcesses();
             String chiperText=io.readFile(filechooser.getSelectedFile());
             this.message =tc.decryptText(chiperText);
-            ShowMessage sm = new ShowMessage();
+            //ShowMessage sm = new ShowMessage();
 
         }
     }//GEN-LAST:event_filechooserActionPerformed
