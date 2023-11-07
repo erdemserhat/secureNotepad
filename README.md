@@ -15,9 +15,10 @@ Installation Video
 https://github.com/erdemserhat/secureNotepad/assets/116950260/d6552a8a-7e2b-4b88-8fb1-b8e84a5bcc45
 
 
-1. [Download the latest version of the application from this link](link).
+1. [Download the latest version of the application from this link]([link](https://drive.google.com/file/d/1Hk_fjHk14ZOCMk0dCzOW04ctYcP_PHM3/view?usp=drive_link)). 
 2. After downloading, extract the contents to your preferred directory.
 3. Navigate to the extracted directory and double-click on the "SecureNotePadBase.exe" file to launch the application.
+4. Installation Wizard Password: "erdemserhat.com" 
 
 ## User Guide
 
