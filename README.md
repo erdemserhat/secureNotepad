@@ -10,7 +10,10 @@ This desktop application has been developed using NetBeans IDE and offers a powe
 
 ## How to Download and Install
 Installation Video
-https://github.com/erdemserhat/secureNotepad/assets/116950260/bd563c48-21e1-4695-a2b1-967683b64347
+
+
+https://github.com/erdemserhat/secureNotepad/assets/116950260/d6552a8a-7e2b-4b88-8fb1-b8e84a5bcc45
+
 
 1. [Download the latest version of the application from this link](link).
 2. After downloading, extract the contents to your preferred directory.
