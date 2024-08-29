@@ -1,7 +1,7 @@
 # RSA Encryption and Decryption Desktop Application
 
 
-This desktop application has been developed using NetBeans IDE and offers a powerful tool for RSA encryption and decryption. RSA is a widely-used public-key encryption algorithm, and with this application, you can securely encrypt and decrypt your text messages.
+This desktop application  offers a powerful tool for RSA encryption and decryption. RSA is a widely-used public-key encryption algorithm, and with this application, you can securely encrypt and decrypt your text messages.
 
 ## Table of Contents
 
